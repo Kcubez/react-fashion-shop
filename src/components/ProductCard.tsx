@@ -15,7 +15,7 @@ const ProductCard = ({ name, price, image }: productType) => {
 
   return (
     <div className="rounded-lg bg-white p-4 shadow-lg">
-      <div className="relative h-48 w-full">
+      <div className="relative h-48 w-full sm:h-56 md:h-64 lg:h-72">
         {!imageLoaded && (
           <div className="absolute inset-0 animate-pulse rounded-md bg-gray-200"></div>
         )}
