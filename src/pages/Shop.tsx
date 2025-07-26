@@ -1,5 +1,41 @@
+import t1 from "@/assets/images/t1.png";
+import t2 from "@/assets/images/t2.png";
+import t3 from "@/assets/images/t3.png";
+import ProductCard from "@/components/ProductCard";
+
+const products = [
+  {
+    id: 1,
+    name: "T-Shirt",
+    price: 29.99,
+    image: t1,
+  },
+  {
+    id: 2,
+    name: "Jeans",
+    price: 39.99,
+    image: t2,
+  },
+  {
+    id: 3,
+    name: "Jacket",
+    price: 49.99,
+    image: t3,
+  },
+];
+
 function Shop() {
-  return <div>Shop</div>;
+  return (
+    <section className="flex grow bg-gray-100">
+      <div className="container mx-auto">
+        <div className="mx-4 my-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+          {products.map((product) => (
+            <ProductCard {...product} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Shop;
